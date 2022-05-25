@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../index.ts"],
+  "sourcesContent": ["let nums = [-1,-100,3,99], k = 2\n\nconst rotate = function(nums: number[], k: number) {\n  /*\n  # Description for array v:\n  #   - v[0] = input array and also output rotate array\n  #   - v[1] = rotate steps\n  #   - v[2] = shifted array-elements\n  */\n  let v: [number[], number, number[]] = [nums, k %= nums.length, []]\n  v[2] = v[0].splice(0, v[0].length - v[1]);\n  for (let i: number = 0; i < v[2].length; i++) {\n    nums.push(v[2][i])\n  }\n  return v[0]\n}\n\nconsole.log(rotate(nums, k))"],
+  "mappings": "AAAA,IAAI,OAAO,CAAC,IAAG,MAAK,GAAE,KAAK,IAAI;AAE/B,MAAM,SAAS,SAAS,OAAgB,IAAW;AAOjD,MAAI,IAAkC,CAAC,OAAM,MAAK,MAAK,QAAQ;AAC/D,IAAE,KAAK,EAAE,GAAG,OAAO,GAAG,EAAE,GAAG,SAAS,EAAE;AACtC,WAAS,IAAY,GAAG,IAAI,EAAE,GAAG,QAAQ,KAAK;AAC5C,UAAK,KAAK,EAAE,GAAG;AAAA;AAEjB,SAAO,EAAE;AAAA;AAGX,QAAQ,IAAI,OAAO,MAAM;",
+  "names": []
+}
